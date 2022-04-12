@@ -31,7 +31,7 @@ export default {
   },
   data: function () {
     return {
-      logoSize: window.innerWidth > 988 ? 50 : 150,
+      logoSize: window.innerWidth > 988 ? 75 : 200,
     };
   },
   mounted() {
@@ -42,7 +42,7 @@ export default {
   },
   methods: {
     setLogoSize() {
-      this.logoSize = window.innerWidth > 988 ? 50 : 150;
+      this.logoSize = window.innerWidth > 988 ? 75 : 200;
     },
   },
 };
@@ -80,7 +80,6 @@ export default {
 .tagline {
   text-align: left;
   line-height: 1;
-  color: white;
   padding: 3px;
 }
 .company {
@@ -94,18 +93,18 @@ a {
   margin: 15px;
   padding: 0px 30px;
   min-height: 50px;
-  background: none;
+  background-color: #28667f;
   border: 2px solid white;
   border-radius: 5px;
   font-size: 1.2em;
   color: white;
 }
 .action-btn:hover {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #195369;
   cursor: pointer;
 }
 .action-btn:active {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: #084054;
 }
 @media (max-width: 988px) {
   #header {

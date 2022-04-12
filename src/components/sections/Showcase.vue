@@ -2,7 +2,11 @@
   <div class="showcase section">
     <div class="module background right secondary">
       <div class="text">
-        <h1>Schedule your client's Brain Week and perform assessments</h1>
+        <h1>
+          Schedule your client's Brain Week, perform assessments, assign daily
+          homework, and see all the information you need to help your client
+          heal!
+        </h1>
       </div>
       <div class="app-wrapper">
         <div class="app">
@@ -15,7 +19,10 @@
     </div>
     <div class="module background left primary first">
       <div class="text">
-        <h1>Group your clients and share your client codes</h1>
+        <h1>
+          Register clients directly linked to your account. Group your clients
+          how you see fit.
+        </h1>
       </div>
       <div class="app-wrapper">
         <div class="app">
@@ -75,7 +82,7 @@ export default {
 .module.background:before {
   content: "";
   position: absolute;
-  width: 200%;
+  width: 400%;
   height: 800px;
   top: -200px;
   z-index: -1;
@@ -115,5 +122,6 @@ export default {
 }
 .app video {
   margin-bottom: -4px;
+  border-radius: 30px;
 }
 </style>

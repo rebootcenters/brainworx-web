@@ -36,9 +36,9 @@ export default {
 
 <style scoped>
 #register-section {
-  background-color: #002b3d;
+  background-color: #499459;
   color: white;
-  padding: 30px;
+  padding: 30px 0px;
 }
 #register-form h1 {
   margin: 0px 0px 20px;
@@ -47,22 +47,31 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px;
-  width: 50%;
+  width: 300px;
+  max-width: 90%;
   margin: auto;
 }
 #register-form input {
   margin: 10px;
   padding: 10px;
   border-radius: 5px;
-  width: 400px;
+  width: 276px;
   font-size: 16px;
   font-weight: 500;
+  margin: 10px 0px;
 }
 #register-form #submit-btn {
-  background-color: #499459;
+  background-color: #28667f;
+  border: 2px solid #28667f;
   color: white;
-  width: 420px;
+  width: 300px;
+}
+#submit-btn:hover {
+  background-color: #195369;
+  cursor: pointer;
+}
+#submit-btn:active {
+  background-color: #084054;
 }
 iframe#hidden-iframe {
   display: none;

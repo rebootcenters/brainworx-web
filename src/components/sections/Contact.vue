@@ -22,7 +22,7 @@
 
 <style scoped>
 .contact {
-  background-color: #499459;
+  background-color: #707070;
   padding: 100px;
   color: white;
   display: flex;

@@ -1,38 +1,11 @@
 <template>
-  <div id="app">
-    <Footer />
-    <div id="body">
-      <!--<home />-->
-      <showcase />
-      <testimonials v-if="false" />
-      <contact />
-      <register-form />
-      <router-view name="RegisterForm" />
-    </div>
-    <Header />
-  </div>
+  <router-view />
 </template>
 
 <script>
-import Header from "@/components/header/Header.vue";
-import Footer from "@/components/footer/Footer.vue";
-import Testimonials from "@/components/sections/Testimonials.vue";
-import Showcase from "@/components/sections/Showcase.vue";
-//import Home from "@/components/sections/Home.vue";
-import Contact from "@/components/sections/Contact.vue";
-import RegisterForm from "@/components/sections/RegisterForm.vue";
-
 export default {
   name: "App",
-  components: {
-    Header,
-    Footer,
-    Testimonials,
-    Showcase,
-    //Home,
-    Contact,
-    RegisterForm,
-  },
+  components: {},
 };
 </script>
 
@@ -49,11 +22,8 @@ body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #28667f;
   margin: 0px;
-  display: flex;
-  flex-direction: column-reverse;
   min-height: 100vh;
 }
 #body {
