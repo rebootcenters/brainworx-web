@@ -1,22 +1,44 @@
 <template>
-  <router-view />
+  <div id="app-body">
+    <Footer />
+    <div id="page">
+      <router-view />
+    </div>
+    <Header v-if="$route.name == 'Home'" />
+    <SlimHeader v-if="$route.name != 'Home'" :title="pageTitle" />
+  </div>
 </template>
 
 <script>
+import Header from "@/components/header/Header.vue";
+import SlimHeader from "@/components/header/SlimHeader.vue";
+import Footer from "@/components/footer/Footer.vue";
+
 export default {
   name: "App",
-  components: {},
+  components: {
+    Header,
+    SlimHeader,
+    Footer,
+  },
+  computed: {
+    pageTitle: function () {
+      switch (this.$route.name) {
+        case "DataRequest":
+          return "ReBoot Brainworx - Data Request";
+        case "Shop":
+          return "Brainworx Shop";
+        default:
+          return "ReBoot Brainworx";
+      }
+    },
+  },
 };
 </script>
 
 <style>
 body {
   margin: 0px;
-  background-image: url("~@/assets/sunset-boy.jpeg");
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 #app {
   font-family: Roboto, Helvetica, Arial, sans-serif;
@@ -24,26 +46,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: #28667f;
   margin: 0px;
+}
+#app-body {
+  display: flex;
+  flex-direction: column-reverse;
   min-height: 100vh;
 }
-#body {
-  margin-top: 100px;
+#page {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   overflow: hidden;
-}
-@media (max-width: 988px) {
-  #body {
-    margin-top: 0px;
-  }
+  flex-grow: 1;
+  background-color: white;
 }
 .section {
   width: 1100px;
   margin: 0px auto;
-}
-#page {
-  flex-grow: 1;
-  background-color: white;
 }
 </style>

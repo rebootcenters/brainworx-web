@@ -107,7 +107,12 @@ export default {
   top: -350px;
 }
 .module .text {
-  width: 400px;
+  width: 500px;
+  margin: 20px;
+  padding: 20px 40px;
+  background: linear-gradient(135deg, #53a665, #41834f);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px;
 }
 .app-wrapper {
   margin: 40px;

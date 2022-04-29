@@ -1,24 +1,27 @@
 <template>
-  <header id="header">
-    <router-link id="header-left" to="/">
-      <div id="logo-container">
-        <site-logo :logo-size="logoSize" />
-      </div>
-      <div>
-        <div class="company">ReBoot Brainworx</div>
-        <div class="tagline">
-          The app that's revolutionizing the mental health industry!
+  <div>
+    <header id="header">
+      <router-link id="header-left" to="/">
+        <div id="logo-container">
+          <site-logo :logo-size="logoSize" />
         </div>
-      </div>
-    </router-link>
-    <div id="header-right">
-      <router-link to="/#register-form">
-        <button class="action-btn">
-          Become a Brainworx Certified Treatment Center
-        </button>
+        <div>
+          <div class="company">ReBoot Brainworx</div>
+          <div class="tagline">
+            The app that's revolutionizing the mental health industry!
+          </div>
+        </div>
       </router-link>
-    </div>
-  </header>
+      <div id="header-right">
+        <router-link to="/#register-form">
+          <button class="action-btn">
+            Become a Brainworx Certified Treatment Center
+          </button>
+        </router-link>
+      </div>
+    </header>
+    <div id="header-placeholder"></div>
+  </div>
 </template>
 
 <script>
@@ -60,6 +63,9 @@ export default {
   width: 100%;
   background: linear-gradient(90deg, #357590, #195369);
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+#header-placeholder {
+  height: 105px;
 }
 #header-left {
   display: flex;
@@ -106,9 +112,17 @@ a {
 .action-btn:active {
   background-color: #084054;
 }
+@media (max-width: 1013px) {
+  #header-placeholder {
+    height: 185px;
+  }
+}
 @media (max-width: 988px) {
   #header {
     position: relative;
+  }
+  #header-placeholder {
+    height: 0px;
   }
   #header-left {
     flex-direction: column;
